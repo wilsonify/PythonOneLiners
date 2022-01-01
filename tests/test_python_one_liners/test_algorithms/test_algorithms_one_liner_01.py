@@ -1,15 +1,12 @@
-# Finding Anagrams with Lambda Functions and Sorting
+from python_one_liners.algorithms.algorithms_one_liner_01 import is_anagram
 
 
-## One-Liner
-is_anagram = lambda x1, x2: sorted(x1) == sorted(x2)
+def test_smoke():
+    print("fire?")
 
-## Results
-print(is_anagram("elvis", "lives"))
-print(is_anagram("elvise", "livees"))
-print(is_anagram("elvis", "dead"))
-'''
-True
-True
-False
-'''
+
+def test_anagrams():
+    # Finding Anagrams with Lambda Functions and Sorting
+    assert is_anagram("elvis", "lives")
+    assert is_anagram("elvise", "livees")
+    assert not is_anagram("elvis", "dead")
