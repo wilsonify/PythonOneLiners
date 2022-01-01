@@ -1,4 +1,4 @@
-# Intermediate Association Analysis to Find Bestseller Bundles
+# Simple Association Analysis: People Who Bought X Also Bought Y
 
 
 ## Dependencies
@@ -17,10 +17,10 @@ basket = np.array([[0, 1, 1, 0],
                    [1, 1, 1, 1]])
 
 ## One-liner
-copurchases = [(i,j,np.sum(basket[:,i] + basket[:,j] == 2)) for i in range(4) for j in range(i+1,4)]
+copurchases = np.sum(np.all(basket[:,2:], axis = 1)) / basket.shape[0]
 
 ## Result
-print(max(copurchases, key=lambda x:x[2]))
+print(copurchases)
 '''
-(1, 2, 5)
+0.25
 '''
