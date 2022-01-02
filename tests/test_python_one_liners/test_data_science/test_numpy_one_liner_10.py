@@ -1,21 +1,23 @@
-# Intermediate Association Analysis to Find Bestseller Bundles
+from python_one_liners.data_science.numpy_one_liner_10 import find_most_copurchased
 
 
-## Dependencies
-import numpy as np
+def test_smoke():
+    print("fire?")
 
-## Data: row is customer shopping basket
-## row = [course 1, course 2, ebook 1, ebook 2]
-## value 1 indicates that an item was bought.
-basket = np.array(
-    [[0, 1, 1, 0], [0, 0, 0, 1], [1, 1, 0, 0], [0, 1, 1, 1], [1, 1, 1, 0], [0, 1, 1, 0], [1, 1, 0, 1], [1, 1, 1, 1]]
-)
 
-## One-liner
-copurchases = [(i, j, np.sum(basket[:, i] + basket[:, j] == 2)) for i in range(4) for j in range(i + 1, 4)]
+def test_find_most_copurchased():
+    # Intermediate Association Analysis to Find Bestseller Bundles
 
-## Result
-print(max(copurchases, key=lambda x: x[2]))
-'''
-(1, 2, 5)
-'''
+    ## Dependencies
+    import numpy as np
+
+    ## Data: row is customer shopping basket
+    ## row = [course 1, course 2, ebook 1, ebook 2]
+    ## value 1 indicates that an item was bought.
+    basket = np.array(
+        [[0, 1, 1, 0], [0, 0, 0, 1], [1, 1, 0, 0], [0, 1, 1, 1], [1, 1, 1, 0], [0, 1, 1, 0], [1, 1, 0, 1], [1, 1, 1, 1]]
+    )
+
+    ## One-liner
+    result = find_most_copurchased(basket)
+    assert result == (1, 2, 5)
