@@ -1,10 +1,10 @@
 # Detecting Word Repetitions
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 text = 'if you use words too often words become used'
 
 ## One-Liner

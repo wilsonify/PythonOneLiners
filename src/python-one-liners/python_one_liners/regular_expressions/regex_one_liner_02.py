@@ -1,17 +1,17 @@
 # Writing Your First Web Scraper with Regular Expressions
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 text_1 = "crypto-bot that is trading Bitcoin and other currencies"
 text_2 = "cryptographic encryption methods that can be cracked easily with quantum computers"
 
-## One-Liner
+# One-Liner
 pattern = re.compile("crypto(.{1,30})coin")
 
-## Result
+# Result
 print(pattern.match(text_1))
 print(pattern.match(text_2))
 '''

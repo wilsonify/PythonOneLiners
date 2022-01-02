@@ -8,10 +8,10 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_mymlp():
     # Neural Network Analysis in One Line
-    ## Dependencies
-    ## Questionaire data (WEEK, YEARS, BOOKS, PROJECTS, EARN, RATING)
+    # Dependencies
+    # Questionaire data (WEEK, YEARS, BOOKS, PROJECTS, EARN, RATING)
     X = np.array(
         [[20, 11, 20, 30, 4000, 3000],
          [12, 4, 0, 0, 1000, 1500],
@@ -32,9 +32,9 @@ def test_q():
          [1, 30, 10, 0, 1000, 1900],
          [7, 16, 5, 0, 0, 3000]])
 
-    ## One-liner
+    # One-liner
     neural_net = mymlp(X)
 
-    ## Result
+    # Result
     res = neural_net.predict([[0, 0, 0, 0, 0]])
     assert res.tolist() == [pytest.approx(1388, abs=1)]

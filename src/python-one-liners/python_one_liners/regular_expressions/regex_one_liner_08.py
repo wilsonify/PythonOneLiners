@@ -1,10 +1,10 @@
 # Duplicate Detection in Strings
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 text = '''
 It was a bright cold day in April, and the clocks were
 striking thirteen. Winston Smith, his chin nuzzled into
@@ -15,10 +15,10 @@ dust from entering along with him.
 -- George Orwell, 1984
 '''
 
-## One-Liner
+# One-Liner
 duplicates = re.findall('([^\s]*(?P<x>[^\s])(?P=x)[^\s]*)', text)
 
-## Results
+# Results
 print(duplicates)
 '''
 [('thirteen.', 'e'), ('nuzzled', 'z'), ('effort', 'f'),

@@ -1,7 +1,7 @@
 # Using List Comprehension to Find Top Earners
 
 
-## Data
+# Data
 employees = {
     'Alice': 100000,
     'Bob': 99817,
@@ -10,9 +10,9 @@ employees = {
     'Eve': 93121
 }
 
-## One-Liner
+# One-Liner
 top_earners = [(k, v) for k, v in employees.items() if v >= 100000]
 
-## Result
+# Result
 print(top_earners)
 # [('Alice', 100000), ('Carol', 122908)]

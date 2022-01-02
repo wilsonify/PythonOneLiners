@@ -5,19 +5,19 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_myknn():
     # K-Nearest Neighbors in One Line
 
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data (House Size (square meters) / House Price ($))
+    # Data (House Size (square meters) / House Price ($))
     X = np.array([[35, 30000], [45, 45000], [40, 50000],
                   [35, 35000], [25, 32500], [40, 40000]])
 
-    ## One-liner
+    # One-liner
     KNN = myknn(X)
 
-    ## Result & puzzle
+    # Result & puzzle
     res = KNN.predict([[30]])
     assert res.tolist() == [32500.]

@@ -7,7 +7,7 @@ def test_smoke():
 
 def test_levenshtein_distance():
     # Finding the Levenshtein Distance
-    ## The Data
+    # The Data
     a = "cat"
     b = "chello"
     c = "chess"
@@ -17,7 +17,7 @@ def test_levenshtein_distance():
 
 def test_levenshtein_distance_multiline():
     # Finding the Levenshtein Distance
-    ## The Data
+    # The Data
     a = "cat"
     b = "chello"
     c = "chess"

@@ -11,13 +11,13 @@ def myline(apple):
 
 
 if __name__ == "__main__":
-    ## Data (Apple stock prices)
+    # Data (Apple stock prices)
     apple = np.array([155, 156, 157])
 
-    ## One-liner
+    # One-liner
     model = myline(apple)
 
-    ## Result & puzzle
+    # Result & puzzle
     print(model.predict([[3], [4]]))
     '''
     [158. 159.]

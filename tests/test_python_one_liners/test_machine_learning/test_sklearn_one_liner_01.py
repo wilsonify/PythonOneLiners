@@ -12,15 +12,15 @@ def test_smoke():
 def test_LinearRegression():
     # Linear Regression
 
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data (Apple stock prices)
+    # Data (Apple stock prices)
     apple = np.array([155, 156, 157])
     n = len(apple)
 
-    ## One-liner
+    # One-liner
     model = myline(apple)
 
-    ## Result & puzzle
+    # Result & puzzle
     assert model.predict([[3], [4]]).tolist() == [158.0, 159.0]

@@ -1,14 +1,14 @@
 # Using Lambda and Map Functions
 
-## Data
+# Data
 txt = ['lambda functions are anonymous functions.',
        'anonymous functions dont have a name.',
        'functions are objects in Python.']
 
-## One-Liner
+# One-Liner
 mark = map(lambda s: (True, s) if 'anonymous' in s else (False, s), txt)
 
-## Result
+# Result
 print(list(mark))
 '''
 [(True, 'lambda functions are anonymous functions.'),

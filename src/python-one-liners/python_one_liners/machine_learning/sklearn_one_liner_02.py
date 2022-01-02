@@ -8,16 +8,16 @@ def mylogreg(X):
 
 
 if __name__ == "__main__":
-    ## Data (#cigarettes, cancer)
+    # Data (#cigarettes, cancer)
     X = np.array([[0, "No"],
                   [10, "No"],
                   [60, "Yes"],
                   [90, "Yes"]])
 
-    ## One-liner
+    # One-liner
     model = mylogreg(X)
 
-    ## Result & puzzle
+    # Result & puzzle
     print(model.predict([[2], [12], [36], [40], [90]]))
     '''
     ['No' 'No' 'Yes' 'Yes' 'Yes']

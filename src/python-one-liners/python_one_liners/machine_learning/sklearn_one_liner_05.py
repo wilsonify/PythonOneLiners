@@ -2,7 +2,7 @@
 
 
 import numpy as np
-## Dependencies
+# Dependencies
 from sklearn.neural_network import MLPRegressor
 
 
@@ -11,7 +11,7 @@ def mymlp(X):
 
 
 if __name__ == "__main__":
-    ## Questionaire data (WEEK, YEARS, BOOKS, PROJECTS, EARN, RATING)
+    # Questionaire data (WEEK, YEARS, BOOKS, PROJECTS, EARN, RATING)
     X = np.array(
         [[20, 11, 20, 30, 4000, 3000],
          [12, 4, 0, 0, 1000, 1500],
@@ -32,10 +32,10 @@ if __name__ == "__main__":
          [1, 30, 10, 0, 1000, 1900],
          [7, 16, 5, 0, 0, 3000]])
 
-    ## One-liner
+    # One-liner
     neural_net = mymlp(X)
 
-    ## Result
+    # Result
     res = neural_net.predict([[0, 0, 0, 0, 0]])
     print(res)
     '''

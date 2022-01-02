@@ -5,19 +5,19 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_mylogreg():
     # Logistic Regression in One Line
     import numpy as np
 
-    ## Data (#cigarettes, cancer)
+    # Data (#cigarettes, cancer)
     X = np.array([[0, "No"],
                   [10, "No"],
                   [60, "Yes"],
                   [90, "Yes"]])
 
-    ## One-liner
+    # One-liner
     model = mylogreg(X)
 
-    ## Result & puzzle
+    # Result & puzzle
     result = model.predict([[2], [12], [37], [40], [90]])
     assert result.tolist() == ['No', 'No', 'Yes', 'Yes', 'Yes']

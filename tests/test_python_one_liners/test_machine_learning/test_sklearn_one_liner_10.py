@@ -1,16 +1,16 @@
 import numpy as np
 
-from python_one_liners.machine_learning.sklearn_one_liner_10 import myrfc
+from python_one_liners.machine_learning.sklearn_one_liner_10 import MyRFC
 
 
 def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_MyRFC():
     # Classification with Random Forests in One Line
 
-    ## Data: student scores in (math, language, creativity) --> study field
+    # Data: student scores in (math, language, creativity) --> study field
     X = np.array([[9, 5, 6, "computer science"],
                   [5, 1, 5, "computer science"],
                   [8, 8, 8, "computer science"],
@@ -19,10 +19,11 @@ def test_q():
                   [5, 7, 9, "art"],
                   [1, 1, 6, "art"]])
 
-    ## One-liner
-    Forest = myrfc(X)
+    # One-liner
+    Forest = MyRFC()
+    Forest.fit(X)
 
-    ## Result
+    # Result
     students = Forest.predict([[8, 6, 5],
                                [3, 7, 9],
                                [2, 2, 1]])

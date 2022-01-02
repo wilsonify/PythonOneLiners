@@ -2,7 +2,7 @@
 
 
 import numpy as np
-## Dependencies
+# Dependencies
 from sklearn.neighbors import KNeighborsRegressor
 
 
@@ -11,14 +11,14 @@ def myknn(X):
 
 
 if __name__ == "__main__":
-    ## Data (House Size (square meters) / House Price ($))
+    # Data (House Size (square meters) / House Price ($))
     X = np.array([[35, 30000], [45, 45000], [40, 50000],
                   [35, 35000], [25, 32500], [40, 40000]])
 
-    ## One-liner
+    # One-liner
     KNN = myknn(X)
 
-    ## Result & puzzle
+    # Result & puzzle
     res = KNN.predict([[30]])
     print(res)
     '''

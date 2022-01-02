@@ -1,10 +1,10 @@
 # Modifying Regex Patterns in a Multiline String
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 text = '''
 Alice Wonderland married John Doe.
 The new name of former 'Alice Wonderland' is Alice Doe.
@@ -12,10 +12,10 @@ Alice Wonderland replaces her old name 'Wonderland' with her new name 'Doe'.
 Alice's sister Jane Wonderland still keeps her old name.
 '''
 
-## One-Liner
+# One-Liner
 updated_text = re.sub("Alice Wonderland(?!')", 'Alice Doe', text)
 
-## Result
+# Result
 print(updated_text)
 '''
 

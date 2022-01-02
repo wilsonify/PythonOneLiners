@@ -1,7 +1,7 @@
 # Get Row with Minimal Variance in One Line
 
 
-## Dependencies
+# Dependencies
 import numpy as np
 
 
@@ -11,17 +11,17 @@ def find_smalled_var(X):
 
 
 if __name__ == "__main__":
-    ## Data (rows: stocks / cols: stock prices)
+    # Data (rows: stocks / cols: stock prices)
     X = np.array([[25, 27, 29, 30],
                   [1, 5, 3, 2],
                   [12, 11, 8, 3],
                   [1, 1, 2, 2],
                   [2, 6, 2, 2]])
 
-    ## One-liner: Find the stock with smallest variance
+    # One-liner: Find the stock with smallest variance
     min_row = find_smalled_var(X)
 
-    ## Result & puzzle
+    # Result & puzzle
     print("Row with minimum variance: " + str(min_row[0]))
     print("Variance: " + str(min_row[1]))
     '''

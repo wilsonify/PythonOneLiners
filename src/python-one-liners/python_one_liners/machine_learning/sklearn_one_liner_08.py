@@ -1,7 +1,7 @@
 # Basic Statistics in One Line
 
 
-## Dependencies
+# Dependencies
 import numpy as np
 
 
@@ -10,7 +10,7 @@ def mvs(x):
 
 
 if __name__ == "__main__":
-    ## Stock Price Data: 5 companies
+    # Stock Price Data: 5 companies
     # (row=[price_day_1, price_day_2, ...])
     x = np.array([[8, 9, 11, 12],
                   [1, 2, 2, 1],
@@ -18,10 +18,10 @@ if __name__ == "__main__":
                   [9, 6, 6, 3],
                   [3, 3, 3, 3]])
 
-    ## One-liner
+    # One-liner
     avg, var, std = mvs(x)
 
-    ## Result & puzzle
+    # Result & puzzle
     print("Averages: " + str(avg))
     print("Variances: " + str(var))
     print("Standard Deviations: " + str(std))

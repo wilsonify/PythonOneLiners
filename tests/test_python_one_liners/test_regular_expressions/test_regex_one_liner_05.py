@@ -1,10 +1,10 @@
 # Finding Nonsecure HTTP URLs
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 article = '''
 The algorithm has important practical applications
 http://blog.finxter.com/applications/
@@ -18,10 +18,10 @@ http://bo.bo.bo.bo.bo.bo/
 http://bo.bo.bo.bo.bo.bo/333483--33343-/
 '''
 
-## One-Liner
+# One-Liner
 stale_links = re.findall('http://[a-z0-9_\-.]+\.[a-z0-9_\-/]+', article)
 
-## Results
+# Results
 print(stale_links)
 '''
 ['http://blog.finxter.com/applications/', 'http://blog.finxter.com/',

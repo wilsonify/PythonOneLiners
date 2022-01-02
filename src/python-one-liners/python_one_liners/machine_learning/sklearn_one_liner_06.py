@@ -10,15 +10,15 @@ def mytree(X):
 
 
 if __name__ == "__main__":
-    ## Data: student scores in (math, language, creativity) --> study field
+    # Data: student scores in (math, language, creativity) --> study field
     X = np.array([[9, 5, 6, "computer science"],
                   [1, 8, 1, "linguistics"],
                   [5, 7, 9, "art"]])
 
-    ## One-liner
+    # One-liner
     Tree = mytree(X)
 
-    ## Result & puzzle
+    # Result & puzzle
     student_0 = Tree.predict([[8, 6, 5]])
     print(student_0)
 

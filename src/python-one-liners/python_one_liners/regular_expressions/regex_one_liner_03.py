@@ -1,10 +1,10 @@
 # Analyzing Hyperlinks of HTML Documents
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 page = '''
 <!DOCTYPE html>
 <html>
@@ -18,10 +18,10 @@ page = '''
 </html>
 '''
 
-## One-Liner
+# One-Liner
 practice_tests = re.findall("(<a.*?finxter.*?(test|puzzle).*?>)", page)
 
-## Result
+# Result
 print(practice_tests)
 '''
 [('<a href="https://app.finxter.com/">test your Python skills</a>', 'test'),

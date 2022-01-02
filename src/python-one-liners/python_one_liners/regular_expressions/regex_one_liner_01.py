@@ -1,16 +1,16 @@
 # Finding Basic Textual Patterns in Strings
 
 
-## Dependencies
+# Dependencies
 import re
 
-## Data
+# Data
 text = 'peter piper picked a peck of pickled peppers'
 
-## One-Liner
+# One-Liner
 result = re.findall('p.*?e.*?r', text)
 
-## Result
+# Result
 print(result)
 '''
 ['peter', 'piper', 'picked a peck of pickled pepper']

@@ -2,16 +2,16 @@ if __name__ == "__main__":
     # Formatting Databases with the zip() Function
 
 
-    ## Data
+    # Data
     column_names = ['name', 'salary', 'job']
     db_rows = [('Alice', 180000, 'data scientist'),
                ('Bob', 99000, 'mid-level manager'),
                ('Frank', 87000, 'CEO')]
 
-    ## One-Liner
+    # One-Liner
     db = [dict(zip(column_names, row)) for row in db_rows]
 
-    ## Result
+    # Result
     print(db)
     '''
     [{'name': 'Alice', 'salary': 180000, 'job': 'data scientist'},

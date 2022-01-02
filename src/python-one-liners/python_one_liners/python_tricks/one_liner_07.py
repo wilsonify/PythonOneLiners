@@ -2,15 +2,15 @@ if __name__ == "__main__":
     # Using Slice Assignment to Correct Corrupted Lists
 
 
-    ## Data
+    # Data
     visitors = ['Firefox', 'corrupted', 'Chrome', 'corrupted',
                 'Safari', 'corrupted', 'Safari', 'corrupted',
                 'Chrome', 'corrupted', 'Firefox', 'corrupted']
 
-    ## One-Liner
+    # One-Liner
     visitors[1::2] = visitors[::2]
 
-    ## Result
+    # Result
     print(visitors)
     '''
     ['Firefox', 'Firefox', 'Chrome', 'Chrome', 'Safari', 'Safari',

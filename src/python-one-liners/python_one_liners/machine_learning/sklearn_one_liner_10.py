@@ -5,12 +5,19 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
 
-def myrfc(X):
-    return RandomForestClassifier(n_estimators=10,random_state=0).fit(X[:, :-1], X[:, -1])
+class MyRFC(RandomForestClassifier):
+    def __init__(self):
+        super().__init__(n_estimators=10, random_state=0)
+
+    def fit(self, X, y=None, sample_weight=None):
+        if y is None:
+            y = X[:, -1]
+            X = X[:, :-1]
+        super().fit(X, y)
 
 
 if __name__ == "__main__":
-    ## Data: student scores in (math, language, creativity) --> study field
+    # Data: student scores in (math, language, creativity) --> study field
     X = np.array([[9, 5, 6, "computer science"],
                   [5, 1, 5, "computer science"],
                   [8, 8, 8, "computer science"],
@@ -19,10 +26,11 @@ if __name__ == "__main__":
                   [5, 7, 9, "art"],
                   [1, 1, 6, "art"]])
 
-    ## One-liner
-    Forest = myrfc(X)
+    # One-liner
+    Forest = MyRFC()
+    Forest.fit(X)
 
-    ## Result
+    # Result
     students = Forest.predict([[8, 6, 5],
                                [3, 7, 9],
                                [2, 2, 1]])
