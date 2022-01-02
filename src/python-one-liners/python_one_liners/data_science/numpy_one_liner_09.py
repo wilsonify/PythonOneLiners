@@ -13,25 +13,29 @@ def find_copurchases(basket):
 
 
 if __name__ == "__main__":
-    ## Dependencies
+    # Dependencies
 
-    ## Data: row is customer shopping basket
-    ## row = [course 1, course 2, ebook 1, ebook 2]
-    ## value 1 indicates that an item was bought.
-    basket = np.array([[0, 1, 1, 0],
-                       [0, 0, 0, 1],
-                       [1, 1, 0, 0],
-                       [0, 1, 1, 1],
-                       [1, 1, 1, 0],
-                       [0, 1, 1, 0],
-                       [1, 1, 0, 1],
-                       [1, 1, 1, 1]])
+    # Data: row is customer shopping basket
+    # row = [course 1, course 2, ebook 1, ebook 2]
+    # value 1 indicates that an item was bought.
+    basket_outer = np.array(
+        [
+            [0, 1, 1, 0],
+            [0, 0, 0, 1],
+            [1, 1, 0, 0],
+            [0, 1, 1, 1],
+            [1, 1, 1, 0],
+            [0, 1, 1, 0],
+            [1, 1, 0, 1],
+            [1, 1, 1, 1],
+        ]
+    )
 
-    ## One-liner
-    copurchases = find_copurchases(basket)
+    # One-liner
+    copurchases = find_copurchases(basket_outer)
 
-    ## Result
+    # Result
     print(copurchases)
-    '''
+    """
     0.25
-    '''
+    """

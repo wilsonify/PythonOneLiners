@@ -13,19 +13,17 @@ def find_names_of_top_three(students, sat_scores):
 
 
 if __name__ == "__main__":
-    ## Dependencies
+    # Dependencies
 
-    ## Data: SAT scores for different students
-    sat_scores = np.array([1100, 1256, 1543,
-                           1043, 989, 1412, 1343])
-    students = np.array(["John", "Bob", "Alice",
-                         "Joe", "Jane", "Frank", "Carl"])
+    # Data: SAT scores for different students
+    sat_scores_outer = np.array([1100, 1256, 1543, 1043, 989, 1412, 1343])
+    students_outer = np.array(["John", "Bob", "Alice", "Joe", "Jane", "Frank", "Carl"])
 
-    ## One-liner
-    top_3 = find_names_of_top_three(students, sat_scores)
+    # One-liner
+    top_3 = find_names_of_top_three(students_outer, sat_scores_outer)
 
-    ## Result
+    # Result
     print(top_3)
-    '''
+    """
     ['Alice' 'Frank' 'Carl']
-    '''
+    """

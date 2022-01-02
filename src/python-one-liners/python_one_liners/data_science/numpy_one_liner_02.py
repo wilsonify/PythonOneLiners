@@ -24,28 +24,27 @@ def selective_increase(employees):
 
 
 if __name__ == "__main__":
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data: yearly salary in ($1000) [2025, 2026, 2027]
+    # Data: yearly salary in ($1000) [2025, 2026, 2027]
     dataScientist = [130, 132, 137]
     productManager = [127, 140, 145]
     designer = [118, 118, 127]
     softwareEngineer = [129, 131, 137]
-    employees = np.array([dataScientist,
-                          productManager,
-                          designer,
-                          softwareEngineer])
+    employees_outer = np.array(
+        [dataScientist, productManager, designer, softwareEngineer]
+    )
 
-    ## One-liner
-    selective_increase(employees)
+    # One-liner
+    selective_increase(employees_outer)
 
-    ## Result
-    print(employees)
-    '''
+    # Result
+    print(employees_outer)
+    """
     expected result looks like 
     [[143 132 150]
      [127 140 145]
      [118 118 127]
      [129 131 137]]
-    '''
+    """

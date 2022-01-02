@@ -1,4 +1,4 @@
-from python_one_liners.data_science.numpy_one_liner_01 import twoD_max
+from python_one_liners.data_science.numpy_one_liner_01 import twod_max
 
 
 def test_smoke():
@@ -21,7 +21,7 @@ def test_twoD_max():
                          [0.1, 0.2, 0.1]])
 
     ## One-liner
-    max_income = twoD_max(salaries - salaries * taxation)
+    max_income = twod_max(salaries - salaries * taxation)
 
     ## Result
     assert max_income == 81.0

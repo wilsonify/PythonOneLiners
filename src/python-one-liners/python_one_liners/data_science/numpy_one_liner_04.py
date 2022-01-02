@@ -8,22 +8,26 @@ def find_superstars(inst):
 
 
 if __name__ == "__main__":
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data: popular Instagram accounts (millions followers)
-    inst = np.array([[232, "@instagram"],
-                     [133, "@selenagomez"],
-                     [59, "@victoriassecret"],
-                     [120, "@cristiano"],
-                     [111, "@beyonce"],
-                     [76, "@nike"]])
+    # Data: popular Instagram accounts (millions followers)
+    inst_outer = np.array(
+        [
+            [232, "@instagram"],
+            [133, "@selenagomez"],
+            [59, "@victoriassecret"],
+            [120, "@cristiano"],
+            [111, "@beyonce"],
+            [76, "@nike"],
+        ]
+    )
 
-    ## One-liner
-    superstars = find_superstars(inst)
+    # One-liner
+    superstars = find_superstars(inst_outer)
 
-    ## Results
+    # Results
     print(superstars)
-    '''
+    """
     ['@instagram' '@selenagomez' '@cristiano' '@beyonce']
-    '''
+    """

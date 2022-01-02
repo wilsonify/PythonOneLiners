@@ -12,18 +12,18 @@ def fill_average(tmp):
 
 
 if __name__ == "__main__":
-    ## Dependencies
+    # Dependencies
 
-    ## Sensor data (Mo, Tu, We, Th, Fr, Sa, Su)
-    tmp = np.array([1, 2, 3, 4, 3, 4, 4,
-                    5, 3, 3, 4, 3, 4, 6,
-                    6, 5, 5, 5, 4, 5, 5])
+    # Sensor data (Mo, Tu, We, Th, Fr, Sa, Su)
+    tmp_outer = np.array(
+        [1, 2, 3, 4, 3, 4, 4, 5, 3, 3, 4, 3, 4, 6, 6, 5, 5, 5, 4, 5, 5]
+    )
 
-    ## One-liner
-    tmp[6::7] = fill_average(tmp)
+    # One-liner
+    tmp_outer[6::7] = fill_average(tmp_outer)
 
-    ## Result
-    print(tmp)
-    '''
+    # Result
+    print(tmp_outer)
+    """
     [1 2 3 4 3 4 3 5 3 3 4 3 4 4 6 5 5 5 4 5 5]
-    '''
+    """

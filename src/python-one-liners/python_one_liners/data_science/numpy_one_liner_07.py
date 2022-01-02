@@ -12,21 +12,25 @@ def predict_bestseller(x, y):
 
 
 if __name__ == "__main__":
-    ## Dependencies
+    # Dependencies
 
-    ## Data (row = [title, rating])
-    books = np.array([['Coffee Break NumPy', 4.6],
-                      ['Lord of the Rings', 5.0],
-                      ['Harry Potter', 4.3],
-                      ['Winnie-the-Pooh', 3.9],
-                      ['The Clown of God', 2.2],
-                      ['Coffee Break Python', 4.7]])
+    # Data (row = [title, rating])
+    books = np.array(
+        [
+            ["Coffee Break NumPy", 4.6],
+            ["Lord of the Rings", 5.0],
+            ["Harry Potter", 4.3],
+            ["Winnie-the-Pooh", 3.9],
+            ["The Clown of God", 2.2],
+            ["Coffee Break Python", 4.7],
+        ]
+    )
 
-    ## Results
+    # Results
     print(predict_bestseller(books, 3.9))
-    '''
+    """
     [['Coffee Break NumPy' '4.6']
      ['Lord of the Rings' '5.0']
      ['Harry Potter' '4.3']
      ['Coffee Break Python' '4.7']]
-    '''
+    """

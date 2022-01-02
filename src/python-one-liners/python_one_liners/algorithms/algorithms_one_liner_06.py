@@ -4,12 +4,12 @@ One-Liner Caesar’s Cipher Encryption Using Advanced Indexing and List Comprehe
 
 
 def rt13(x):
+    abc = "abcdefghijklmnopqrstuvwxyz"
     return "".join([abc[(abc.find(c) + 13) % 26] for c in x])
 
 
 if __name__ == "__main__":
     # Data
-    abc = "abcdefghijklmnopqrstuvwxyz"
     s = "xthexrussiansxarexcoming"
     # Result
     print(rt13(s))  # kgurkehffvnafknerkpbzvat
