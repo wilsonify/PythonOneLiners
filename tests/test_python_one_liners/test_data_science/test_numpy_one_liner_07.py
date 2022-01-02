@@ -7,7 +7,7 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_predict_bestseller():
     # How to Use Lambda Functions and Boolean Indexing to Filter Arrays
 
     ## Dependencies

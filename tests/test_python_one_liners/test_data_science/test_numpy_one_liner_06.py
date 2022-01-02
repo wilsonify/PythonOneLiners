@@ -5,7 +5,7 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_find_names_of_top_three():
     # When to Use the sort() Function and When to Use the argsort() Function in NumPy
 
     ## Dependencies

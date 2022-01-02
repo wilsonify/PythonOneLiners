@@ -7,7 +7,7 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_find_above_average():
     # Conditional Array Search, Filtering, and Broadcasting to Detect Outliers
 
     ## Data: air quality index AQI data (row = city)

@@ -5,7 +5,7 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_find_outliers():
     # How to Create Advanced Array Filters with Statistics, Math, and Logic
 
     ## Dependencies

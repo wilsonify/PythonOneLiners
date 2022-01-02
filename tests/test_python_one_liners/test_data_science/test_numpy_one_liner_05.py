@@ -5,7 +5,7 @@ def test_smoke():
     print("fire?")
 
 
-def test_q():
+def test_fill_average():
     # Broadcasting, Slice Assignment, and Reshaping to Clean Every i-th Array Element
 
     ## Dependencies
