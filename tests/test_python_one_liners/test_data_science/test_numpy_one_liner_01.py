@@ -1,17 +1,20 @@
+"""
+test for numpy_one_liner_01
+"""
 from python_one_liners.data_science.numpy_one_liner_01 import twod_max
-
+import numpy as np
 
 def test_smoke():
+    """# does it turn on"""
     print("fire?")
 
 
 def test_twod_max():
+    """
     # Basic Two-Dimensional Array Arithmetic
-
-    # Dependencies
-    import numpy as np
-
     # Data: yearly salary in ($1000) [2017, 2018, 2019]
+    :return:
+    """
     alice = [99, 101, 103]
     bob = [110, 108, 105]
     tim = [90, 88, 85]

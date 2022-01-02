@@ -4,14 +4,12 @@ from python_one_liners.data_science.numpy_one_liner_07 import predict_bestseller
 
 
 def test_smoke():
+    """ smoke """
     print("fire?")
 
 
 def test_predict_bestseller():
-    # How to Use Lambda Functions and Boolean Indexing to Filter Arrays
-
-    # Dependencies
-
+    """How to Use Lambda Functions and Boolean Indexing to Filter Arrays"""
     # Data (row = [title, rating])
     books = np.array(
         [

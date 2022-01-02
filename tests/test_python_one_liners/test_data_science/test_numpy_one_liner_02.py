@@ -1,15 +1,20 @@
+"""
+test for numpy_one_liner_02
+"""
+import numpy as np
+
 from python_one_liners.data_science.numpy_one_liner_02 import selective_increase
 
 
 def test_smoke():
+    """ smoke """
     print("fire?")
 
 
 def test_selective_increase():
+    """
     # Working with NumPy Arrays: Slicing, Broadcasting, and Array Types
-
-    # Dependencies
-    import numpy as np
+    """
 
     # Data: yearly salary in ($1000) [2025, 2026, 2027]
     data_scientist = [130, 132, 137]

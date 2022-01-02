@@ -1,16 +1,18 @@
+"""
+test for numpy_one_liner_04
+"""
+import numpy as np
+
 from python_one_liners.data_science.numpy_one_liner_04 import find_superstars
 
 
 def test_smoke():
+    """ smoke """
     print("fire?")
 
 
 def test_find_superstars():
-    # Boolean Indexing to Filter Two-Dimensional Arrays
-
-    # Dependencies
-    import numpy as np
-
+    """Boolean Indexing to Filter Two-Dimensional Arrays"""
     # Data: popular Instagram accounts (millions followers)
     inst = np.array(
         [

@@ -1,15 +1,21 @@
+"""
+test for numpy_one_liner_03
+"""
 import numpy as np
 
 from python_one_liners.data_science.numpy_one_liner_03 import find_above_average
 
 
 def test_smoke():
+    """ smoke """
     print("fire?")
 
 
 def test_find_above_average():
+    """
     # Conditional Array Search, Filtering, and Broadcasting to Detect Outliers
-
+    :return:
+    """
     # Data: air quality index AQI data (row = city)
     air_quality_index = np.array(
         [
