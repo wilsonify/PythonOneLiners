@@ -1,10 +1,15 @@
 # Classification with Random Forests in One Line
 
 
-## Dependencies
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-if __name__=="__main__":
+
+
+def myrfc(X):
+    return RandomForestClassifier(n_estimators=10,random_state=0).fit(X[:, :-1], X[:, -1])
+
+
+if __name__ == "__main__":
     ## Data: student scores in (math, language, creativity) --> study field
     X = np.array([[9, 5, 6, "computer science"],
                   [5, 1, 5, "computer science"],
@@ -15,7 +20,7 @@ if __name__=="__main__":
                   [1, 1, 6, "art"]])
 
     ## One-liner
-    Forest = RandomForestClassifier(n_estimators=10).fit(X[:,:-1], X[:,-1])
+    Forest = myrfc(X)
 
     ## Result
     students = Forest.predict([[8, 6, 5],

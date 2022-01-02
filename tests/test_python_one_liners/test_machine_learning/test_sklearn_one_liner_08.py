@@ -1,4 +1,6 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+import pytest
+
+from python_one_liners.machine_learning.sklearn_one_liner_08 import mvs
 
 
 def test_smoke():
@@ -6,10 +8,7 @@ def test_smoke():
 
 
 def test_q():
-
-
     # Basic Statistics in One Line
-
 
     ## Dependencies
     import numpy as np
@@ -23,14 +22,22 @@ def test_q():
                   [3, 3, 3, 3]])
 
     ## One-liner
-    avg, var, std = np.average(x, axis=1), np.var(x, axis=1), np.std(x, axis=1)
+    avg, var, std = mvs(x)
 
     ## Result & puzzle
-    print("Averages: " + str(avg))
-    print("Variances: " + str(var))
-    print("Standard Deviations: " + str(std))
-    '''
-    Averages: [10.   1.5  7.   6.   3. ]
-    Variances: [2.5  0.25 8.5  4.5  0.  ]
-    Standard Deviations: [1.58113883 0.5        2.91547595 2.12132034 0.        ]
-    '''
+    # "Averages: "
+    assert avg.tolist() == [
+        10., 1.5, 7., 6., 3.
+    ]
+    # "Variances:
+    assert var.tolist() == [
+        2.5, 0.25, 8.5, 4.5, 0.
+    ]
+    # "Standard Deviations: "
+    assert std.tolist() == [
+        pytest.approx(1.58113883, abs=0.1),
+        pytest.approx(0.5, abs=0.1),
+        pytest.approx(2.91547595, abs=0.1),
+        pytest.approx(2.12132034, abs=0.1),
+        pytest.approx(0, abs=0.1),
+    ]

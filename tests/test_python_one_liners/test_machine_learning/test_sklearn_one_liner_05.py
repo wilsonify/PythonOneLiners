@@ -1,20 +1,16 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+import numpy as np
+import pytest
+
+from python_one_liners.machine_learning.sklearn_one_liner_05 import mymlp
 
 
 def test_smoke():
- print("fire?")
+    print("fire?")
 
 
 def test_q():
-
-
     # Neural Network Analysis in One Line
-
-
     ## Dependencies
-    from sklearn.neural_network import MLPRegressor
-    import numpy as np
-
     ## Questionaire data (WEEK, YEARS, BOOKS, PROJECTS, EARN, RATING)
     X = np.array(
         [[20, 11, 20, 30, 4000, 3000],
@@ -37,11 +33,8 @@ def test_q():
          [7, 16, 5, 0, 0, 3000]])
 
     ## One-liner
-    neural_net = MLPRegressor(max_iter=10000).fit(X[:,:-1], X[:,-1])
+    neural_net = mymlp(X)
 
     ## Result
     res = neural_net.predict([[0, 0, 0, 0, 0]])
-    print(res)
-    '''
-    [1289.34225619]
-    '''
+    assert res.tolist() == [pytest.approx(1388, abs=1)]

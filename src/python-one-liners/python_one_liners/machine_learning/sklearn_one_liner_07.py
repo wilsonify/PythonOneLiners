@@ -3,16 +3,23 @@
 
 ## Dependencies
 import numpy as np
-if __name__=="__main__":
+
+
+def find_smalled_var(X):
+    """Find the stock with smallest variance"""
+    return min([(i, np.var(X[i, :])) for i in range(len(X))], key=lambda x: x[1])
+
+
+if __name__ == "__main__":
     ## Data (rows: stocks / cols: stock prices)
-    X = np.array([[25,27,29,30],
-                  [1,5,3,2],
-                  [12,11,8,3],
-                  [1,1,2,2],
-                  [2,6,2,2]])
+    X = np.array([[25, 27, 29, 30],
+                  [1, 5, 3, 2],
+                  [12, 11, 8, 3],
+                  [1, 1, 2, 2],
+                  [2, 6, 2, 2]])
 
     ## One-liner: Find the stock with smallest variance
-    min_row = min([(i,np.var(X[i,:])) for i in range(len(X))], key=lambda x: x[1])
+    min_row = find_smalled_var(X)
 
     ## Result & puzzle
     print("Row with minimum variance: " + str(min_row[0]))

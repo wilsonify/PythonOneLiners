@@ -1,4 +1,4 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+from python_one_liners.machine_learning.sklearn_one_liner_04 import myknn
 
 
 def test_smoke():
@@ -6,25 +6,18 @@ def test_smoke():
 
 
 def test_q():
-
-
     # K-Nearest Neighbors in One Line
 
-
     ## Dependencies
-    from sklearn.neighbors import KNeighborsRegressor
     import numpy as np
 
     ## Data (House Size (square meters) / House Price ($))
     X = np.array([[35, 30000], [45, 45000], [40, 50000],
-                [35, 35000], [25, 32500], [40, 40000]])
+                  [35, 35000], [25, 32500], [40, 40000]])
 
     ## One-liner
-    KNN = KNeighborsRegressor(n_neighbors=3).fit(X[:,0].reshape(-1,1), X[:,1])
+    KNN = myknn(X)
 
     ## Result & puzzle
     res = KNN.predict([[30]])
-    print(res)
-    '''
-    [32500.]
-    '''
+    assert res.tolist() == [32500.]

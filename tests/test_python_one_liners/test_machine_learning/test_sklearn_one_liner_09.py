@@ -1,4 +1,4 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+from python_one_liners.machine_learning.sklearn_one_liner_09 import mysvc
 
 
 def test_smoke():
@@ -6,13 +6,9 @@ def test_smoke():
 
 
 def test_q():
-
-
     # Classification with Support-Vector Machines in One Line
 
-
     ## Dependencies
-    from sklearn import svm
     import numpy as np
 
     ## Data: student scores in (math, language, creativity) --> study field
@@ -24,16 +20,11 @@ def test_q():
                   [5, 7, 9, "art"]])
 
     ## One-liner
-    svm = svm.SVC().fit(X[:,:-1], X[:,-1])
+    svm = mysvc(X)
 
     ## Result & puzzle
     student_0 = svm.predict([[3, 3, 6]])
-    print(student_0)
+    assert student_0 == 'art'
 
     student_1 = svm.predict([[8, 1, 1]])
-    print(student_1)
-
-    '''
-    ['art']
-    ['computer science']
-    '''
+    assert student_1 == 'computer science'

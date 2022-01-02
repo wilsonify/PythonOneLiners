@@ -1,4 +1,4 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+from python_one_liners.machine_learning.sklearn_one_liner_02 import mylogreg
 
 
 def test_smoke():
@@ -6,10 +6,7 @@ def test_smoke():
 
 
 def test_q():
-
-
     # Logistic Regression in One Line
-    from sklearn.linear_model import LogisticRegression
     import numpy as np
 
     ## Data (#cigarettes, cancer)
@@ -19,10 +16,8 @@ def test_q():
                   [90, "Yes"]])
 
     ## One-liner
-    model = LogisticRegression().fit(X[:,0].reshape(-1,1), X[:,1])
+    model = mylogreg(X)
 
     ## Result & puzzle
-    print(model.predict([[2],[12],[13],[40],[90]]))
-    '''
-    ['No' 'No' 'Yes' 'Yes' 'Yes']
-    '''
+    result = model.predict([[2], [12], [37], [40], [90]])
+    assert result.tolist() == ['No', 'No', 'Yes', 'Yes', 'Yes']

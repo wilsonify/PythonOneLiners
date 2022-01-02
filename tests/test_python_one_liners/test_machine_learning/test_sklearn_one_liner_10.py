@@ -1,4 +1,6 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+import numpy as np
+
+from python_one_liners.machine_learning.sklearn_one_liner_10 import myrfc
 
 
 def test_smoke():
@@ -6,14 +8,7 @@ def test_smoke():
 
 
 def test_q():
-
-
     # Classification with Random Forests in One Line
-
-
-    ## Dependencies
-    import numpy as np
-    from sklearn.ensemble import RandomForestClassifier
 
     ## Data: student scores in (math, language, creativity) --> study field
     X = np.array([[9, 5, 6, "computer science"],
@@ -25,13 +20,10 @@ def test_q():
                   [1, 1, 6, "art"]])
 
     ## One-liner
-    Forest = RandomForestClassifier(n_estimators=10).fit(X[:,:-1], X[:,-1])
+    Forest = myrfc(X)
 
     ## Result
     students = Forest.predict([[8, 6, 5],
                                [3, 7, 9],
                                [2, 2, 1]])
-    print(students)
-    '''
-    ['computer science' 'art' 'literature']
-    '''
+    assert students.tolist() == ['computer science', 'art', 'literature']

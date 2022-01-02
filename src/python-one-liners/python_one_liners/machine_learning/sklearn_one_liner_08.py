@@ -3,7 +3,13 @@
 
 ## Dependencies
 import numpy as np
-if __name__=="__main__":
+
+
+def mvs(x):
+    return np.average(x, axis=1), np.var(x, axis=1), np.std(x, axis=1)
+
+
+if __name__ == "__main__":
     ## Stock Price Data: 5 companies
     # (row=[price_day_1, price_day_2, ...])
     x = np.array([[8, 9, 11, 12],
@@ -13,7 +19,7 @@ if __name__=="__main__":
                   [3, 3, 3, 3]])
 
     ## One-liner
-    avg, var, std = np.average(x, axis=1), np.var(x, axis=1), np.std(x, axis=1)
+    avg, var, std = mvs(x)
 
     ## Result & puzzle
     print("Averages: " + str(avg))

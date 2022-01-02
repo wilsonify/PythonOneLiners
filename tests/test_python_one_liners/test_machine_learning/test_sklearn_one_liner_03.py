@@ -1,4 +1,4 @@
-from python_one_liners.algorithms.algorithms_one_liner_10 import q
+from python_one_liners.machine_learning.sklearn_one_liner_03 import mykmeans
 
 
 def test_smoke():
@@ -8,9 +8,7 @@ def test_smoke():
 def test_q():
     # K-Means Clustering in One Line
 
-
     ## Dependencies
-    from sklearn.cluster import KMeans
     import numpy as np
 
     ## Data (Work (h) / Salary ($))
@@ -18,12 +16,8 @@ def test_q():
                   [20, 2000], [25, 2200], [15, 1800]])
 
     ## One-liner
-    kmeans = KMeans(n_clusters=2).fit(X)
+    model = mykmeans(X)
 
     ## Result & puzzle
-    cc = kmeans.cluster_centers_
-    print(cc)
-    '''
-    [[  20. 2000.]
-     [  50. 7000.]]
-    '''
+    cc = model.cluster_centers_
+    assert cc.tolist() == [[20.0, 2000.0], [50.0, 7000.0]]

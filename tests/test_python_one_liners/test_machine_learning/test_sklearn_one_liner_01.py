@@ -1,8 +1,7 @@
 """
-test for LinearRegression
+test for sklearn_one_liner_01
 """
-
-from python_one_liners.data_science.numpy_one_liner_10 import find_most_copurchased
+from python_one_liners.machine_learning.sklearn_one_liner_01 import myline
 
 
 def test_smoke():
@@ -10,12 +9,10 @@ def test_smoke():
     print("fire?")
 
 
-def test_LinearRegression(basket):
+def test_LinearRegression():
     # Linear Regression
 
-
     ## Dependencies
-    from sklearn.linear_model import LinearRegression
     import numpy as np
 
     ## Data (Apple stock prices)
@@ -23,10 +20,7 @@ def test_LinearRegression(basket):
     n = len(apple)
 
     ## One-liner
-    model = LinearRegression().fit(np.arange(n).reshape((n,1)), apple)
+    model = myline(apple)
 
     ## Result & puzzle
-    print(model.predict([[3],[4]]))
-    '''
-    [158. 159.]
-    '''
+    assert model.predict([[3], [4]]).tolist() == [158.0, 159.0]

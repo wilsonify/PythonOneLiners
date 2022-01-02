@@ -4,6 +4,10 @@
 ## Dependencies
 from sklearn import svm
 import numpy as np
+
+def mysvc(X):
+    return svm.SVC().fit(X[:,:-1], X[:,-1])
+
 if __name__=="__main__":
     ## Data: student scores in (math, language, creativity) --> study field
     X = np.array([[9, 5, 6, "computer science"],
@@ -14,7 +18,7 @@ if __name__=="__main__":
                   [5, 7, 9, "art"]])
 
     ## One-liner
-    svm = svm.SVC().fit(X[:,:-1], X[:,-1])
+    svm = mysvc(X)
 
     ## Result & puzzle
     student_0 = svm.predict([[3, 3, 6]])

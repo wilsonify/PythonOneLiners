@@ -1,10 +1,16 @@
 # Neural Network Analysis in One Line
 
 
+import numpy as np
 ## Dependencies
 from sklearn.neural_network import MLPRegressor
-import numpy as np
-if __name__=="__main__":
+
+
+def mymlp(X):
+    return MLPRegressor(max_iter=10000, random_state=0).fit(X[:, :-1], X[:, -1])
+
+
+if __name__ == "__main__":
     ## Questionaire data (WEEK, YEARS, BOOKS, PROJECTS, EARN, RATING)
     X = np.array(
         [[20, 11, 20, 30, 4000, 3000],
@@ -27,7 +33,7 @@ if __name__=="__main__":
          [7, 16, 5, 0, 0, 3000]])
 
     ## One-liner
-    neural_net = MLPRegressor(max_iter=10000).fit(X[:,:-1], X[:,-1])
+    neural_net = mymlp(X)
 
     ## Result
     res = neural_net.predict([[0, 0, 0, 0, 0]])
