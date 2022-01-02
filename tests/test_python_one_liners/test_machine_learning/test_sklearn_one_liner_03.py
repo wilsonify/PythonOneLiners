@@ -1,4 +1,6 @@
-from python_one_liners.machine_learning.sklearn_one_liner_03 import mykmeans
+import numpy as np
+
+from python_one_liners.machine_learning.sklearn_one_liner_03 import MyKMeans
 
 
 def test_smoke():
@@ -9,14 +11,14 @@ def test_mykmeans():
     # K-Means Clustering in One Line
 
     # Dependencies
-    import numpy as np
 
     # Data (Work (h) / Salary ($))
     X = np.array([[35, 7000], [45, 6900], [70, 7100],
                   [20, 2000], [25, 2200], [15, 1800]])
 
     # One-liner
-    model = mykmeans(X)
+    model = MyKMeans()
+    model.fit(X)
 
     # Result & puzzle
     cc = model.cluster_centers_

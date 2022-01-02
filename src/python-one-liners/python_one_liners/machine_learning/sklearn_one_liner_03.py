@@ -6,8 +6,15 @@ import numpy as np
 from sklearn.cluster import KMeans
 
 
-def mykmeans(X):
-    return KMeans(n_clusters=2, random_state=0).fit(X)
+class MyKMeans(KMeans):
+    def __init__(self):
+        super().__init__(n_clusters=2, random_state=0)
+
+    def fit(self, X, y=None, sample_weight=None):
+        super().fit(X, y, sample_weight)
+
+
+
 
 
 if __name__ == "__main__":
@@ -16,7 +23,8 @@ if __name__ == "__main__":
                   [20, 2000], [25, 2200], [15, 1800]])
 
     # One-liner
-    model = mykmeans(X)
+    model = MyKMeans()
+    model.fit(X)
 
     # Result & puzzle
     cc = model.cluster_centers_
