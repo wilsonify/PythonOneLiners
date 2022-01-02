@@ -1,26 +1,36 @@
-# Decision-Tree Learning in One Line
+from python_one_liners.algorithms.algorithms_one_liner_10 import q
 
 
-## Dependencies
-from sklearn import tree
-import numpy as np
+def test_smoke():
+    print("fire?")
 
-## Data: student scores in (math, language, creativity) --> study field
-X = np.array([[9, 5, 6, "computer science"],
-              [1, 8, 1, "linguistics"],
-              [5, 7, 9, "art"]])
 
-## One-liner
-Tree = tree.DecisionTreeClassifier().fit(X[:,:-1], X[:,-1])
+def test_q():
 
-## Result & puzzle
-student_0 = Tree.predict([[8, 6, 5]])
-print(student_0)
 
-student_1 = Tree.predict([[3, 7, 9]])
-print(student_1)
+    # Decision-Tree Learning in One Line
 
-'''
-['computer science']
-['linguistics']
-'''
+
+    ## Dependencies
+    from sklearn import tree
+    import numpy as np
+
+    ## Data: student scores in (math, language, creativity) --> study field
+    X = np.array([[9, 5, 6, "computer science"],
+                  [1, 8, 1, "linguistics"],
+                  [5, 7, 9, "art"]])
+
+    ## One-liner
+    Tree = tree.DecisionTreeClassifier().fit(X[:,:-1], X[:,-1])
+
+    ## Result & puzzle
+    student_0 = Tree.predict([[8, 6, 5]])
+    print(student_0)
+
+    student_1 = Tree.predict([[3, 7, 9]])
+    print(student_1)
+
+    '''
+    ['computer science']
+    ['linguistics']
+    '''
