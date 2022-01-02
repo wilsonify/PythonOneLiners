@@ -1,3 +1,8 @@
+def sum_every_other(x):
+    """ Sum Over Every Other Value """
+    return sum(x[::2])
+
+
 if __name__ == "__main__":
     # Sum Over Every Other Value Python One-Liner
-    lambda stock_prices: sum(stock_prices[::2])
+    print(sum_every_other([100, 2030, 4045, 20]))  # 4145

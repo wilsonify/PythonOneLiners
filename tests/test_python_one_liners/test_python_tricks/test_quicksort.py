@@ -1,2 +1,12 @@
-# Quicksort Python One-liner
-lambda L: [] if L == [] else qsort([x for x in L[1:] if x < L[0]]) + L[0:1] + qsort([x for x in L[1:] if x >= L[0]])
+from python_one_liners.python_tricks.quicksort import qsort
+
+
+def test_smoke():
+    print("fire?")
+
+
+def test_q():
+    assert qsort([]) == []
+    assert qsort([1]) == [1]
+    assert qsort([None]) == [None]
+    assert qsort([10, 35, 633, 54, 1123, 0]) == [0, 10, 35, 54, 633, 1123]
