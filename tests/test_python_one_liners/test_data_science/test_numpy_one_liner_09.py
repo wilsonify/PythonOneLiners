@@ -8,23 +8,27 @@ def test_smoke():
 def test_find_copurchases():
     # Simple Association Analysis: People Who Bought X Also Bought Y
 
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data: row is customer shopping basket
-    ## row = [course 1, course 2, ebook 1, ebook 2]
-    ## value 1 indicates that an item was bought.
-    basket = np.array([[0, 1, 1, 0],
-                       [0, 0, 0, 1],
-                       [1, 1, 0, 0],
-                       [0, 1, 1, 1],
-                       [1, 1, 1, 0],
-                       [0, 1, 1, 0],
-                       [1, 1, 0, 1],
-                       [1, 1, 1, 1]])
+    # Data: row is customer shopping basket
+    # row = [course 1, course 2, ebook 1, ebook 2]
+    # value 1 indicates that an item was bought.
+    basket = np.array(
+        [
+            [0, 1, 1, 0],
+            [0, 0, 0, 1],
+            [1, 1, 0, 0],
+            [0, 1, 1, 1],
+            [1, 1, 1, 0],
+            [0, 1, 1, 0],
+            [1, 1, 0, 1],
+            [1, 1, 1, 1],
+        ]
+    )
 
-    ## One-liner
+    # One-liner
     copurchases = find_copurchases(basket)
 
-    ## Result
+    # Result
     assert copurchases == 0.25

@@ -8,19 +8,28 @@ def test_smoke():
 def test_find_superstars():
     # Boolean Indexing to Filter Two-Dimensional Arrays
 
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data: popular Instagram accounts (millions followers)
-    inst = np.array([[232, "@instagram"],
-                     [133, "@selenagomez"],
-                     [59, "@victoriassecret"],
-                     [120, "@cristiano"],
-                     [111, "@beyonce"],
-                     [76, "@nike"]])
+    # Data: popular Instagram accounts (millions followers)
+    inst = np.array(
+        [
+            [232, "@instagram"],
+            [133, "@selenagomez"],
+            [59, "@victoriassecret"],
+            [120, "@cristiano"],
+            [111, "@beyonce"],
+            [76, "@nike"],
+        ]
+    )
 
-    ## One-liner
+    # One-liner
     superstars = find_superstars(inst)
 
-    ## Results
-    assert superstars.tolist() == ['@instagram', '@selenagomez', '@cristiano', '@beyonce']
+    # Results
+    assert superstars.tolist() == [
+        "@instagram",
+        "@selenagomez",
+        "@cristiano",
+        "@beyonce",
+    ]

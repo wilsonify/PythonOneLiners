@@ -8,17 +8,15 @@ def test_smoke():
 def test_find_names_of_top_three():
     # When to Use the sort() Function and When to Use the argsort() Function in NumPy
 
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Data: SAT scores for different students
-    sat_scores = np.array([1100, 1256, 1543,
-                           1043, 989, 1412, 1343])
-    students = np.array(["John", "Bob", "Alice",
-                         "Joe", "Jane", "Frank", "Carl"])
+    # Data: SAT scores for different students
+    sat_scores = np.array([1100, 1256, 1543, 1043, 989, 1412, 1343])
+    students = np.array(["John", "Bob", "Alice", "Joe", "Jane", "Frank", "Carl"])
 
-    ## One-liner
+    # One-liner
     top_3 = find_names_of_top_three(students, sat_scores)
 
-    ## Result
-    assert top_3.tolist() == ['Alice', 'Frank', 'Carl']
+    # Result
+    assert top_3.tolist() == ["Alice", "Frank", "Carl"]

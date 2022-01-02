@@ -8,16 +8,36 @@ def test_smoke():
 def test_fill_average():
     # Broadcasting, Slice Assignment, and Reshaping to Clean Every i-th Array Element
 
-    ## Dependencies
+    # Dependencies
     import numpy as np
 
-    ## Sensor data (Mo, Tu, We, Th, Fr, Sa, Su)
-    tmp = np.array([1, 2, 3, 4, 3, 4, 4,
-                    5, 3, 3, 4, 3, 4, 6,
-                    6, 5, 5, 5, 4, 5, 5])
+    # Sensor data (Mo, Tu, We, Th, Fr, Sa, Su)
+    tmp = np.array([1, 2, 3, 4, 3, 4, 4, 5, 3, 3, 4, 3, 4, 6, 6, 5, 5, 5, 4, 5, 5])
 
-    ## One-liner
+    # One-liner
     tmp[6::7] = fill_average(tmp)
 
-    ## Result
-    assert tmp.tolist() == [1, 2, 3, 4, 3, 4, 3, 5, 3, 3, 4, 3, 4, 4, 6, 5, 5, 5, 4, 5, 5]
+    # Result
+    assert tmp.tolist() == [
+        1,
+        2,
+        3,
+        4,
+        3,
+        4,
+        3,
+        5,
+        3,
+        3,
+        4,
+        3,
+        4,
+        4,
+        6,
+        5,
+        5,
+        5,
+        4,
+        5,
+        5,
+    ]
