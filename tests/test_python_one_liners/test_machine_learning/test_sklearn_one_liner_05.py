@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from python_one_liners.machine_learning.sklearn_one_liner_05 import mymlp
+from python_one_liners.machine_learning.sklearn_one_liner_05 import MyMLP
 
 
 def test_smoke():
@@ -33,7 +33,8 @@ def test_mymlp():
          [7, 16, 5, 0, 0, 3000]])
 
     # One-liner
-    neural_net = mymlp(X)
+    neural_net = MyMLP()
+    neural_net.fit(X[:, :-1], X[:, -1])
 
     # Result
     res = neural_net.predict([[0, 0, 0, 0, 0]])

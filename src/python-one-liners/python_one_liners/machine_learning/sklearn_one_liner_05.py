@@ -6,8 +6,15 @@ import numpy as np
 from sklearn.neural_network import MLPRegressor
 
 
-def mymlp(X):
-    return MLPRegressor(max_iter=10000, random_state=0).fit(X[:, :-1], X[:, -1])
+class MyMLP(MLPRegressor):
+    def __init__(self):
+        super().__init__(max_iter=10000, random_state=0)
+
+    def fit(self, X, y=None):
+        if y is None:
+            y = X[:, -1]
+            X = X[:, :-1]
+        super().fit(X, y)
 
 
 if __name__ == "__main__":
@@ -33,7 +40,8 @@ if __name__ == "__main__":
          [7, 16, 5, 0, 0, 3000]])
 
     # One-liner
-    neural_net = mymlp(X)
+    neural_net = MyMLP()
+    neural_net.fit(X)
 
     # Result
     res = neural_net.predict([[0, 0, 0, 0, 0]])
