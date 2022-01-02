@@ -1,17 +1,24 @@
-# Calculating the Fibonacci Series with the reduce() Function
+"""
+The One-Liner Calculating the Fibonacci Series using reduce()
+"""
+
+from functools import reduce  # Dependencies
 
 
-# Dependencies
-from functools import reduce
+def fibs(n=10):
+    def function(x, _):
+        return x + [x[-2] + x[-1]]
 
-# The Data
-n = 10
+    sequence = [0] * (n - 2)
+    initial = [0, 1]
+    return reduce(function, sequence, initial)
 
-# The One-Liner
-fibs = reduce(lambda x, _: x + [x[-2] + x[-1]], [0] * (n-2), [0, 1])
 
-# The Result
-print(fibs)
-'''
-[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-'''
+if __name__ == "__main__":
+    # The Data
+    n_outer = 10
+    # The Result
+    print(fibs(n_outer))
+    '''
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    '''

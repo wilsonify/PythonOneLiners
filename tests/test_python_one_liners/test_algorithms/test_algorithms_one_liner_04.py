@@ -1,23 +1,26 @@
-# Finding the Levenshtein Distance
+from python_one_liners.algorithms.algorithms_one_liner_04 import ls, ls_ml
 
 
-## The Data
-a = "cat"
-b = "chello"
-c = "chess"
+def test_smoke():
+    print("fire?")
 
-## The One-Liner
-ls = lambda a, b: len(b) if not a else len(a) if not b else min(
-    ls(a[1:], b[1:])+(a[0] != b[0]),
-    ls(a[1:], b)+1,
-    ls(a, b[1:])+1)
 
-## The Result
-print(ls(a,b))
-print(ls(a,c))
-print(ls(b,c))
-'''
-5
-4
-3
-'''
+def test_levenshtein_distance():
+    # Finding the Levenshtein Distance
+    ## The Data
+    a = "cat"
+    b = "chello"
+    c = "chess"
+    assert ls(a, b) == 5
+    assert ls(a, c) == 4
+    assert ls(b, c) == 3
+
+def test_levenshtein_distance_multiline():
+    # Finding the Levenshtein Distance
+    ## The Data
+    a = "cat"
+    b = "chello"
+    c = "chess"
+    assert ls_ml(a, b) == 5
+    assert ls_ml(a, c) == 4
+    assert ls_ml(b, c) == 3

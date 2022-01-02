@@ -1,14 +1,14 @@
-# Counting Permutations with Recursive Factorial Functions
+"""
+The One-Liner Counting Permutations with Recursive Factorial Functions
+"""
 
 
-## The Data
-n = 5
+def factorial(n):
+    return n * factorial(n - 1) if n > 1 else 1
 
-## The One-Liner
-factorial = lambda n: n * factorial(n-1) if n > 1 else 1
 
-## The Result
-print(factorial(n))
-'''
-120
-'''
+if __name__ == "__main__":
+    # The Data
+    n_outer = 5
+    # The Result
+    print(factorial(n_outer))  # 120

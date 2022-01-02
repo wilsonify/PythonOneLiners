@@ -4,7 +4,7 @@ def is_anagram(x1, x2):
 
 
 if __name__ == "__main__":
-    ## Results
+    # Results
     print(is_anagram("elvis", "lives"))
     print(is_anagram("elvise", "livees"))
     print(is_anagram("elvis", "dead"))

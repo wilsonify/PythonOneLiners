@@ -1,17 +1,21 @@
-# Calculating the Powerset by Using Functional Programming
+"""
+The One-Liner Calculating the Powerset by Using Functional Programming
+"""
+
+from functools import reduce  # Dependencies
 
 
-# Dependencies
-from functools import reduce
+def ps(sequence):
+    def function(p, x):
+        return p + [subset | {x} for subset in p]
 
-# The Data
-s = {1, 2, 3}
+    initial = [set()]
+    return reduce(function, sequence, initial)
 
-# The One-Liner
-ps = lambda s: reduce(lambda P, x: P + [subset | {x} for subset in P], s, [set()])
 
-# The Result
-print(ps(s))
-'''
-[set(), {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}]
-'''
+if __name__ == "__main__":
+    # The Data
+    s_outer = {1, 2, 3}
+    # The Result
+    print(ps(s_outer))
+    # [set(), {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}]

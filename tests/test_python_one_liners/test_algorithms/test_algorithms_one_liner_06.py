@@ -1,17 +1,13 @@
-# Caesar’s Cipher Encryption Using Advanced Indexing and List Comprehension
+from python_one_liners.algorithms.algorithms_one_liner_06 import rt13
 
 
-## Data
-abc = "abcdefghijklmnopqrstuvwxyz"
-s = "xthexrussiansxarexcoming"
+def test_smoke():
+    print("fire?")
 
-## One-Liner
-rt13 = lambda x: "".join([abc[(abc.find(c) + 13) % 26] for c in x])
 
-## Result
-print(rt13(s))
-print(rt13(rt13(s)))
-'''
-kgurkehffvnafknerkpbzvat
-xthexrussiansxarexcoming
-'''
+def test_rt13():
+    # Caesar’s Cipher Encryption Using Advanced Indexing and List Comprehension
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    s = "xthexrussiansxarexcoming"
+    assert rt13(s) == "kgurkehffvnafknerkpbzvat"
+    assert rt13(rt13(s)) == "xthexrussiansxarexcoming"

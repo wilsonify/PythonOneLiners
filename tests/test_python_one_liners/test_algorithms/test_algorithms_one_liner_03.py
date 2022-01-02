@@ -1,14 +1,10 @@
-# Counting Permutations with Recursive Factorial Functions
+from python_one_liners.algorithms.algorithms_one_liner_03 import factorial
 
 
-## The Data
-n = 5
+def test_smoke():
+    print("fire?")
 
-## The One-Liner
-factorial = lambda n: n * factorial(n-1) if n > 1 else 1
 
-## The Result
-print(factorial(n))
-'''
-120
-'''
+def test_factorial():
+    # Counting Permutations with Recursive Factorial Functions
+    assert factorial(5) == 120
