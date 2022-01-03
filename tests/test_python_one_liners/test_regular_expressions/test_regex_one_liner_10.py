@@ -1,28 +1,20 @@
-# Modifying Regex Patterns in a Multiline String
+from python_one_liners.regular_expressions.regex_one_liner_10 import substitute
 
-
-# Dependencies
-import re
-
-## Data
-text = '''
+def test_q():
+    text = '''
 Alice Wonderland married John Doe.
 The new name of former 'Alice Wonderland' is Alice Doe.
 Alice Wonderland replaces her old name 'Wonderland' with her new name 'Doe'.
 Alice's sister Jane Wonderland still keeps her old name.
 '''
 
-## One-Liner
-updated_text = re.sub("Alice Wonderland(?!')", 'Alice Doe', text)
+    updated_text = substitute(text)
 
-## Result
-print(updated_text)
-'''
-
-Alice Doe married John Doe.
-The new name of former 'Alice Wonderland' is Alice Doe.
-Alice Doe replaces her old name 'Wonderland' with her new name 'Doe'.
-Alice's sister Jane Wonderland still keeps her old name.
-
-
-'''
+    assert updated_text == (
+        '\n'
+        'Alice Doe married John Doe.\n'
+        "The new name of former 'Alice Wonderland' is Alice Doe.\n"
+        "Alice Doe replaces her old name 'Wonderland' with her new name 'Doe'.\n"
+        "Alice's sister Jane Wonderland still keeps her old name.\n"
+        ''
+    )
