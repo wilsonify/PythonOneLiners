@@ -1,5 +1,3 @@
-import re
-
 from python_one_liners.regular_expressions.regex_one_liner_08 import find_words_with_duplicate_chars
 
 
@@ -8,12 +6,10 @@ def test_smoke():
     print("fire?")
 
 
-
 def test_q():
     # Duplicate Detection in Strings
 
     # Dependencies
-    import re
 
     # Data
     text = '''
@@ -29,7 +25,7 @@ def test_q():
     # One-Liner
     duplicates = find_words_with_duplicate_chars(text)
 
-    ## Results
+    # Results
     assert duplicates == [
         ('thirteen.', 'e'), ('nuzzled', 'z'), ('effort', 'f'), ('slipped', 'p'), ('glass', 's'),
         ('doors', 'o'), ('gritty', 't'), ('--', '-'), ('Orwell,', 'l')

@@ -10,7 +10,6 @@ def test_q():
     # Finding Nonsecure HTTP URLs
 
     # Dependencies
-    import re
 
     # Data
     article = '''

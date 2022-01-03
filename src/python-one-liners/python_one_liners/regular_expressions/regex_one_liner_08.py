@@ -1,4 +1,4 @@
-# Duplicate Detection in Strings
+""" Duplicate Detection in Strings """
 import re
 
 
@@ -9,14 +9,14 @@ def find_words_with_duplicate_chars(text):
     separated by an arbitrary number of whitespace characters.
     :return:
     """
-    return re.findall('([^\s]*(?P<x>[^\s])(?P=x)[^\s]*)', text)
+    return re.findall(r'([^\s]*(?P<x>[^\s])(?P=x)[^\s]*)', text)
 
 
 if __name__ == "__main__":
     # Dependencies
 
     # Data
-    text = '''
+    text_outer = '''
     It was a bright cold day in April, and the clocks were
     striking thirteen. Winston Smith, his chin nuzzled into
     his breast in an effort to escape the vile wind, slipped
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     '''
 
     # One-Liner
-    duplicates = find_words_with_duplicate_chars(text)
+    duplicates = find_words_with_duplicate_chars(text_outer)
 
     # Results
     print(duplicates)

@@ -1,4 +1,4 @@
-# Detecting Word Repetitions
+""" Detecting Word Repetitions """
 import re
 
 
@@ -9,15 +9,15 @@ def find_repeat_less_than_10(text):
     and in-between are at most 10 words.
     :return:
     """
-    return re.search('\s(?P<x>[a-z]+)\s+([a-z]+\s+){0,10}(?P=x)\s', ' ' + text + ' ')
+    return re.search(r'\s(?P<x>[a-z]+)\s+([a-z]+\s+){0,10}(?P=x)\s', ' ' + text + ' ')
 
 
 if __name__ == "__main__":
     # Data
-    text = 'if you use words too often words become used'
+    text_outer = 'if you use words too often words become used'
 
     # One-Liner
-    style_problems = find_repeat_less_than_10(text)
+    style_problems = find_repeat_less_than_10(text_outer)
 
     # Results
     print(style_problems)

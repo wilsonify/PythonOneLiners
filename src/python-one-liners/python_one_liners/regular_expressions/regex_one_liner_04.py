@@ -12,7 +12,7 @@ def find_dollar_amounts(report):
     :return:
     """
 
-    return [x[0] for x in re.findall('(\$[0-9]+(\.[0-9]*)?)', report)]
+    return [x[0] for x in re.findall(r'(\$[0-9]+(\.[0-9]*)?)', report)]
 
 
 if __name__ == "__main__":
@@ -21,14 +21,14 @@ if __name__ == "__main__":
     # Dependencies
 
     # Data
-    report = '''
+    report_outer = '''
     If you invested $1 in the year 1801, you would have $18087791.41 today.
     This is a 7.967% return on investment.
     But if you invested only $0.25 in 1801, you would end up with $4521947.8525.
     '''
 
     # One-Liner
-    dollars = find_dollar_amounts(report)
+    dollars = find_dollar_amounts(report_outer)
 
     # Result
     print(dollars)

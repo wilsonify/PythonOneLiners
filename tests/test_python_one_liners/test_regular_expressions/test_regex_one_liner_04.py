@@ -10,7 +10,6 @@ def test_q():
     # Extracting Dollars from a String
 
     # Dependencies
-    import re
 
     # Data
     report = '''

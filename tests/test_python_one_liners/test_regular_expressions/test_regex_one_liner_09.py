@@ -14,8 +14,8 @@ def test_q():
     # Data
     text = 'if you use words too often words become used'
 
-    ## One-Liner
+    # One-Liner
     style_problems = find_repeat_less_than_10(text)
 
-    ## Results
+    # Results
     assert style_problems.group(0) == ' words too often words '

@@ -10,7 +10,6 @@ def test_q():
     # Finding Basic Textual Patterns in Strings
 
     # Dependencies
-    import re
 
     # Data
     text = 'peter piper picked a peck of pickled peppers'

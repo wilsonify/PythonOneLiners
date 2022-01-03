@@ -1,5 +1,6 @@
 import re
 
+
 def find_puzzle_links(page):
     """
     given a string,
@@ -14,9 +15,8 @@ if __name__ == "__main__":
 
     # Dependencies
 
-
     # Data
-    page = '''
+    page_outer = '''
     <!DOCTYPE html>
     <html>
     <body>
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     '''
 
     # One-Liner
-    practice_tests = find_puzzle_links(page)
+    practice_tests = find_puzzle_links(page_outer)
 
     # Result
     print(practice_tests)

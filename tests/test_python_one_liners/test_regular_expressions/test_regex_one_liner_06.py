@@ -19,12 +19,4 @@ def test_smoke():
     )
 )
 def test_q(x, expected):
-    # Validating the Time Format of User Input, Part 1
-
-    # Dependencies
-
-    # Data
-    inputs = ['18:29', '23:55', '123', 'ab:de', '18:299', '99:99']
-
-    # Result
     assert input_ok(x) == expected

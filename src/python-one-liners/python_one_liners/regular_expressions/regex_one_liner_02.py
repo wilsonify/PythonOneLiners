@@ -1,5 +1,6 @@
 import re
 
+
 def find_crypto_then_30(text):
     """
     given a string, you will find occurrences in which the string 'crypto' is followed by up to 30 arbitrary characters,
@@ -16,7 +17,6 @@ if __name__ == "__main__":
     # Writing Your First Web Scraper with Regular Expressions
 
     # Dependencies
-
 
     # Data
     text_1 = "crypto-bot that is trading Bitcoin and other currencies"

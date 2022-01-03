@@ -1,4 +1,5 @@
 """
+# Finding Basic Textual Patterns in Strings
 Our input is a string,
 and our goal is to use a nongreedy approach to find all patterns that start with the character 'p',
 end with the character 'r', and have at least one occurrence of the character 'e'
@@ -12,22 +13,22 @@ import re
 
 
 def find_p_then_r(text):
+    """ find all patterns that
+    start with the character 'p',
+    end with the character 'r',
+    and have at least one occurrence of the character 'e'
+    """
     return re.findall('p.*?e.*?r', text)
 
 
 if __name__ == "__main__":
-    # Finding Basic Textual Patterns in Strings
-
     # Dependencies
 
     # Data
-    text = 'peter piper picked a peck of pickled peppers'
+    text_outer = 'peter piper picked a peck of pickled peppers'
 
     # One-Liner
-    result = find_p_then_r(text)
+    result = find_p_then_r(text_outer)
 
     # Result
-    print(result)
-    '''
-    ['peter', 'piper', 'picked a peck of pickled pepper']
-    '''
+    print(result)  # ['peter', 'piper', 'picked a peck of pickled pepper']

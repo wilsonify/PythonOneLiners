@@ -8,7 +8,7 @@ def input_ok(text):
 
     :return:
     """
-    return re.fullmatch('[0-9]{2}:[0-9]{2}', text) != None
+    return re.fullmatch('[0-9]{2}:[0-9]{2}', text) is not None
 
 
 if __name__ == "__main__":
