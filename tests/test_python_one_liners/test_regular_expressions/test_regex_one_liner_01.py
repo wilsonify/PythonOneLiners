@@ -1,17 +1,22 @@
-# Finding Basic Textual Patterns in Strings
+from python_one_liners.regular_expressions.regex_one_liner_01 import find_p_then_r
 
 
-# Dependencies
-import re
+def test_smoke():
+    """ smoke """
+    print("fire?")
 
-# Data
-text = 'peter piper picked a peck of pickled peppers'
 
-# One-Liner
-result = re.findall('p.*?e.*?r', text)
+def test_q():
+    # Finding Basic Textual Patterns in Strings
 
-# Result
-print(result)
-'''
-['peter', 'piper', 'picked a peck of pickled pepper']
-'''
+    # Dependencies
+    import re
+
+    # Data
+    text = 'peter piper picked a peck of pickled peppers'
+
+    # One-Liner
+    result = find_p_then_r(text)
+
+    # Result
+    assert result == ['peter', 'piper', 'picked a peck of pickled pepper']

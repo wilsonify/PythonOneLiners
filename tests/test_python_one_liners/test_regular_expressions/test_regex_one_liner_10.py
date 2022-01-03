@@ -1,5 +1,9 @@
 from python_one_liners.regular_expressions.regex_one_liner_10 import substitute
 
+def test_smoke():
+    """ smoke """
+    print("fire?")
+
 def test_q():
     text = '''
 Alice Wonderland married John Doe.

@@ -1,29 +1,32 @@
-# Analyzing Hyperlinks of HTML Documents
+def test_smoke():
+    """ smoke """
+    print("fire?")
 
 
-# Dependencies
-import re
+def test_q():
+    # Analyzing Hyperlinks of HTML Documents
 
-# Data
-page = '''
-<!DOCTYPE html>
-<html>
-<body>
-<h1>My Programming Links</h1>
-<a href="https://app.finxter.com/">test your Python skills</a>
-<a href="https://blog.finxter.com/recursion/">Learn recursion</a>
-<a href="https://nostarch.com/">Great books from NoStarchPress</a>
-<a href="http://finxter.com/">Solve more Python puzzles</a>
-</body>
-</html>
-'''
+    # Dependencies
+    import re
 
-# One-Liner
-practice_tests = re.findall("(<a.*?finxter.*?(test|puzzle).*?>)", page)
+    # Data
+    page = '''
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <h1>My Programming Links</h1>
+    <a href="https://app.finxter.com/">test your Python skills</a>
+    <a href="https://blog.finxter.com/recursion/">Learn recursion</a>
+    <a href="https://nostarch.com/">Great books from NoStarchPress</a>
+    <a href="http://finxter.com/">Solve more Python puzzles</a>
+    </body>
+    </html>
+    '''
 
-# Result
-print(practice_tests)
-'''
-[('<a href="https://app.finxter.com/">test your Python skills</a>', 'test'),
- ('<a href="http://finxter.com/">Solve more Python puzzles</a>', 'puzzle')]
-'''
+    # One-Liner
+    practice_tests = re.findall("(<a.*?finxter.*?(test|puzzle).*?>)", page)
+
+    assert practice_tests == [
+        ('<a href="https://app.finxter.com/">test your Python skills</a>', 'test'),
+        ('<a href="http://finxter.com/">Solve more Python puzzles</a>', 'puzzle')
+    ]

@@ -1,17 +1,21 @@
-# Detecting Word Repetitions
+from python_one_liners.regular_expressions.regex_one_liner_09 import find_repeat_less_than_10
 
 
-# Dependencies
-import re
+def test_smoke():
+    """ smoke """
+    print("fire?")
 
-# Data
-text = 'if you use words too often words become used'
 
-## One-Liner
-style_problems = re.search('\s(?P<x>[a-z]+)\s+([a-z]+\s+){0,10}(?P=x)\s', ' ' + text + ' ')
+def test_q():
+    # Detecting Word Repetitions
 
-## Results
-print(style_problems)
-'''
-<re.Match object; span=(11, 34), match=' words too often words '>
-'''
+    # Dependencies
+
+    # Data
+    text = 'if you use words too often words become used'
+
+    ## One-Liner
+    style_problems = find_repeat_less_than_10(text)
+
+    ## Results
+    assert style_problems.group(0) == ' words too often words '
